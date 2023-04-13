@@ -1,0 +1,9 @@
+/* Fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+/* Remove margin from all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+}
