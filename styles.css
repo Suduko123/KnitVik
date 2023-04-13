@@ -7,3 +7,120 @@
 *::after {
   margin: 0;
 }
+
+/* Setting height of page to 100% */
+html,
+body {
+  height: 100%;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Frontpage zoom through effect */
+#zoom-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#zoom-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/bg.svg");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out;
+}
+
+#zoom-image h1 {
+  font-family: "Lobster Two", cursive;
+  font-size: 30pt;
+  width: 300px;
+  font-weight: 400;
+  position: relative;
+  left: 35%;
+}
+
+#zoom-image2 {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#zoom-image2 svg {
+  transition: 0.5s ease-out;
+  transform: scale(1.6);
+}
+
+/* Animations */
+@keyframes sway {
+  0% {
+    transform: rotate(0.3deg);
+  }
+  100% {
+    transform: rotate(-0.3deg);
+  }
+}
+
+@keyframes swayReverse {
+  0% {
+    transform: rotate(-0.3deg);
+  }
+  100% {
+    transform: rotate(0.3deg);
+  }
+}
+
+/* Animations applied to each SVG grouped element */
+#sweater {
+  transform-origin: bottom left;
+  animation: sway 1s ease-in-out infinite alternate-reverse;
+}
+#mitten {
+  transform-origin: bottom center;
+  animation: sway 0.8s ease-in-out infinite alternate-reverse;
+}
+#laptop {
+  transform-origin: center;
+  animation: swayReverse 1.2s ease-in-out infinite alternate-reverse;
+}
+#yarn {
+  transform-origin: center;
+  animation: swayReverse 0.8s ease-in-out infinite alternate-reverse;
+}
+#knitting {
+  transform-origin: center;
+  animation: swayReverse 1s ease-in-out infinite alternate-reverse;
+}
+#eraser {
+  transform-origin: bottom;
+  animation: sway 1s ease-in-out infinite alternate-reverse;
+}
+#coffee {
+  transform-origin: right;
+  animation: sway 0.8s ease-in-out infinite alternate-reverse;
+}
+#pencil {
+  transform-origin: center;
+  animation: swayReverse 1s ease-in-out infinite alternate-reverse;
+}
+#paper {
+  transform-origin: bottom;
+  animation: swayReverse 1.2s ease-in-out infinite alternate-reverse;
+}
+#hat {
+  transform-origin: right;
+  animation: sway 0.8s ease-in-out infinite alternate-reverse;
+}
+
+#welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  display: none;
+}
