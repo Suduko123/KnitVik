@@ -243,3 +243,85 @@ body {
   width: 900px;
   height: 900px;
 }
+
+#citat p {
+  font-size: 27pt;
+  font-weight: 100;
+}
+
+#citat {
+  text-align: center;
+}
+
+#univers p {
+  text-align: center;
+  padding-top: 60px;
+  font-size: 20pt;
+  font-weight: 100;
+}
+
+#knitvik {
+  font-family: "Lobster Two", cursive;
+  font-size: 23pt;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+#knitvik a {
+  color: black;
+  text-decoration: none;
+}
+
+/* 404-siden */
+#fourofour{
+  text-align: center;
+  background-color: #FCFAF5;
+  overflow: hidden;
+}
+
+#fourofour h1{
+  font-size: 55pt;
+  margin-top: 100px;
+  font-weight: 100;
+}
+
+#fourofour p {
+  font-size: 25pt;
+  margin-top: 120px;
+  margin-bottom: 140px;
+}
+
+#illustrationer{
+  display: flex;
+}
+
+#Bwoken {
+  width: 28%;
+  position: relative;
+  left: 50px;
+  bottom: 160px;
+}
+
+#CoffeeSpill {
+  width: 63%; 
+  position: relative;
+  left: 165px;
+  bottom: 220px;
+  z-index: -1;
+}
+
+#button {
+  font-size: 20pt;
+  background-color: #F4F1EB;
+  border-radius: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+
