@@ -89,5 +89,30 @@ const init = () => {
   window.addEventListener("wheel", wheelHandler);
 };
 
+// Two videoes at bottom of page
 
+const twoVids = document.querySelectorAll(".video-container video");
 
+twoVids.forEach((vid) => {
+  let videoClicked = false;
+  vid.addEventListener("click", () => {
+    if (!videoClicked) {
+      vid.load();
+    }
+    vid.play();
+    vid.style.filter = "brightness(1)";
+    vid.requestFullscreen();
+    vid.muted = false;
+    videoClicked = true;
+
+    function fullscreenchanged() {
+      if (!document.fullscreenElement) {
+        vid.pause();
+        vid.autoplay = false;
+        vid.style.filter = "brightness(0.6)";
+      }
+    }
+
+    document.addEventListener("fullscreenchange", fullscreenchanged);
+  });
+});

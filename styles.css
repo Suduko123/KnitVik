@@ -230,20 +230,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .video-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 500px;
+  width: 480px;
+  height: 480px;
   border-radius: 50%;
   overflow: hidden;
 }
+
 .circleVid {
-  width: 900px;
-  height: 900px;
+  width: 860px;
+  height: 860px;
+  filter: brightness(0.6);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.circleVid:hover {
+  filter: brightness(0.8) !important;
 }
 
 #citat p {
@@ -277,13 +287,13 @@ body {
 }
 
 /* 404-siden */
-#fourofour{
+#fourofour {
   text-align: center;
-  background-color: #FCFAF5;
+  background-color: #fcfaf5;
   overflow: hidden;
 }
 
-#fourofour h1{
+#fourofour h1 {
   font-size: 55pt;
   margin-top: 100px;
   font-weight: 100;
@@ -295,7 +305,7 @@ body {
   margin-bottom: 140px;
 }
 
-#illustrationer{
+#illustrationer {
   display: flex;
 }
 
@@ -307,7 +317,7 @@ body {
 }
 
 #CoffeeSpill {
-  width: 63%; 
+  width: 63%;
   position: relative;
   left: 145px;
   bottom: 220px;
@@ -316,7 +326,7 @@ body {
 
 #button {
   font-size: 20pt;
-  background-color: #F4F1EB;
+  background-color: #f4f1eb;
   border-radius: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -325,5 +335,3 @@ body {
   text-decoration: none;
   color: black;
 }
-
-
