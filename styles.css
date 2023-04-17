@@ -181,12 +181,15 @@ body {
 }
 
 #horizontal-container div {
-  min-width: 50vw;
-  min-height: 100vh;
+  height: 100vh;
+  width: 200vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4ch;
+}
+#horizontal-container img {
+  width: 200vw;
+  height: 90%;
 }
 
 /* Section about business */
