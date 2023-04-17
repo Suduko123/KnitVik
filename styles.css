@@ -177,6 +177,7 @@ body {
   position: relative;
   text-align: center;
   height: 97vh;
+  padding-top: 15px;
 }
 #knitText h1 {
   font-size: 35pt;
