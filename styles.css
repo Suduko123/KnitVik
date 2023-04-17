@@ -129,7 +129,36 @@ body {
 /* Welcome section */
 #welcome {
   display: flex;
-  height: 100vh;
+  height: auto;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 10%;
+  /* padding-bottom: 5%; */
+  gap: 10%;
+}
+
+#welcome div {
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+}
+
+#welcome div h1 {
+  font-size: 35pt;
+  padding-bottom: 5%;
+}
+
+#welcomeimg div img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+#floatimg {
+  position: relative;
+  bottom: 150px;
+  left: 150px;
+  z-index: -1;
 }
 
 /* Knit in Denmark section */
@@ -182,14 +211,14 @@ body {
 
 #horizontal-container div {
   height: 100vh;
-  width: 200vw;
+  width: 160vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #horizontal-container img {
-  width: 200vw;
-  height: 90%;
+  width: 160vw;
+  height: 93%;
 }
 
 /* Section about business */
