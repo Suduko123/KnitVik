@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
     <title>KnitVik - Webdokumentar</title>
@@ -826,16 +827,21 @@
         </div>
         <div id="welcomeimg">
           <div>
-            <img src="images/pernillepåtrappe.jpg" alt="Pernille på trapper" />
+            <img src="images/pernillepåtrappe.jpg" alt="Pernille på trapper" />
           </div>
           <div>
             <img id="floatimg" src="images/vegmedstrikkeprover.jpg" alt="Væg med strikkeprøver" />
           </div>
         </div>
       </div>
-      <video id="fullscreenVideo" loop>
-        <source src="videos/strik.mp4" type="video/mp4" />
-      </video>
+      <div id="fullscreenVideo">
+        <div id="playButton">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <video>
+          <source src="videos/strik.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div id="knitInDK">
         <div id="knitText">
           <h1>Strik i Danmark</h1>
@@ -924,6 +930,9 @@
       </div>
       <div id="twoVideoes">
         <div class="video-container">
+          <div class="text-circle">
+            <h1>Hjælp fra uddannelsen</h1>
+          </div>
           <video class="circleVid" autoplay muted loop>
             <source src="videos/short.mp4" type="video/mp4" />
           </video>
@@ -932,6 +941,9 @@
           <video class="circleVid" autoplay muted loop>
             <source src="videos/long.mp4" type="video/mp4" />
           </video>
+          <div class="text-circle">
+            <h1>Iværksætter mindsettet</h1>
+          </div>
         </div>
       </div>
       <section>

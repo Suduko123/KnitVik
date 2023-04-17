@@ -117,26 +117,32 @@ twoVids.forEach((vid) => {
   });
 });
 
-// Video play automatically if in view
+// Playbutton
 
-function isInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
+const playButton = document.querySelector(".fa-play");
+const fulscreenVideo = document.querySelector("#fullscreenVideo video");
+const videoContainer = document.querySelector("#fullscreenVideo");
 
-const fullscreenVideo = document.querySelector("#fullscreenVideo");
-
-document.addEventListener("scroll", () => {
-  if (isInViewport(fullscreenVideo)) {
-    fullscreenVideo.play();
-    console.log("Yes its here!");
+playButton.addEventListener("click", () => {
+  if (fulscreenVideo.paused) {
+    fulscreenVideo.play();
+    playButton.classList.replace("fa-play", "fa-pause");
+    setTimeout(hideButton, 3000);
+    checkMove();
   } else {
-    console.log("No... Not in view...");
-    fullscreenVideo.pause();
+    fulscreenVideo.pause();
+    playButton.classList.replace("fa-pause", "fa-play");
   }
 });
+
+function checkMove() {
+  videoContainer.addEventListener("mousemove", () => {
+    if (!videoContainer.paused) {
+      playButton.style.filter = "opacity(1)";
+    }
+  });
+}
+
+function hideButton() {
+  playButton.style.filter = "opacity(0)";
+}

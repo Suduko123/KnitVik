@@ -164,11 +164,29 @@ body {
 
 /* Fullscreen video */
 #fullscreenVideo {
-  display: block;
-  margin: auto;
-  width: 80%;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   overflow: hidden;
+}
+#fullscreenVideo video {
+  width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+#playButton {
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.fa-play,
+.fa-pause {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 90pt;
+  color: rgb(255, 255, 255);
 }
 
 /* Knit in Denmark section */
@@ -260,8 +278,12 @@ body {
   margin-bottom: 30px;
 }
 
-#long-text p {
+#long-text p:not(#long-text p:last-child) {
   margin-bottom: 250px;
+}
+
+#long-text p:last-child {
+  margin-bottom: 150px;
 }
 
 #laptop {
@@ -280,8 +302,8 @@ body {
   margin-bottom: 50px;
 }
 .video-container {
+  pointer-events: fill;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 480px;
@@ -289,20 +311,37 @@ body {
   border-radius: 50%;
   overflow: hidden;
 }
+.text-circle {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  z-index: 100;
+}
+.text-circle h1 {
+  font-size: 30pt;
+  color: white;
+}
 
 .circleVid {
+  pointer-events: fill;
   width: 860px;
   height: 860px;
   filter: brightness(0.6);
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 .circleVid:hover {
+  transform: scale(1.05);
   filter: brightness(0.8) !important;
 }
 
 #citat p {
-  font-size: 27pt;
+  font-size: 25pt;
   font-weight: 100;
 }
 
@@ -313,15 +352,13 @@ body {
 #univers p {
   text-align: center;
   padding-top: 60px;
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 100;
 }
 
 #knitvik {
   font-family: "Lobster Two", cursive;
-  font-size: 23pt;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  font-size: 20pt;
   width: 100%;
   text-align: center;
 }
@@ -329,6 +366,7 @@ body {
 #knitvik a {
   color: black;
   text-decoration: none;
+  padding-bottom: 20px;
 }
 
 /* 404-siden */
@@ -379,4 +417,56 @@ body {
   padding-right: 30px;
   text-decoration: none;
   color: black;
+}
+
+/* Responsive Ipad */
+@media only screen and (min-width: 651px) and (max-width: 1023px) {
+  #welcome {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #welcome div {
+    margin-top: 5%;
+  }
+
+  #welcomeimg div {
+    flex-direction: column;
+  }
+
+  #welcomeimg div img {
+    width: 80%;
+    height: auto;
+  }
+
+  #floatimg {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+/* Responsive telefon */
+@media only screen and (max-width: 1023px) {
+  #welcome {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  #welcome div {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #welcomeimg div {
+    flex-direction: column;
+  }
+
+  #floatimg {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
 }
