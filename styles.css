@@ -307,7 +307,7 @@ body {
 #CoffeeSpill {
   width: 63%; 
   position: relative;
-  left: 165px;
+  left: 145px;
   bottom: 220px;
   z-index: -1;
 }
