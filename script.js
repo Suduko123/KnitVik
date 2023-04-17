@@ -116,3 +116,27 @@ twoVids.forEach((vid) => {
     document.addEventListener("fullscreenchange", fullscreenchanged);
   });
 });
+
+// Video play automatically if in view
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+const fullscreenVideo = document.querySelector("#fullscreenVideo");
+
+document.addEventListener("scroll", () => {
+  if (isInViewport(fullscreenVideo)) {
+    fullscreenVideo.play();
+    console.log("Yes its here!");
+  } else {
+    console.log("No... Not in view...");
+    fullscreenVideo.pause();
+  }
+});

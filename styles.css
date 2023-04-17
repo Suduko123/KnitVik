@@ -164,7 +164,11 @@ body {
 
 /* Fullscreen video */
 #fullscreenVideo {
-  scroll-snap-align: start;
+  display: block;
+  margin: auto;
+  width: 80%;
+  scroll-snap-align: center;
+  overflow: hidden;
 }
 
 /* Knit in Denmark section */
@@ -267,7 +271,6 @@ body {
 
 /* Two videoes section */
 #twoVideoes {
-  scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
