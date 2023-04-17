@@ -88,3 +88,6 @@ const init = () => {
   setStickyContainersSize();
   window.addEventListener("wheel", wheelHandler);
 };
+
+
+

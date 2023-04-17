@@ -136,7 +136,7 @@ body {
 #knitInDK {
   position: relative;
   text-align: center;
-  height: 100vh;
+  height: 97vh;
 }
 #knitText h1 {
   font-size: 35pt;
@@ -146,7 +146,9 @@ body {
 #knitText p {
   margin: auto;
   width: 80%;
+  padding-bottom: 50px;
 }
+
 #discount-circle {
   position: absolute;
   right: 50px;
