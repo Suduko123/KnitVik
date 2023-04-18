@@ -127,6 +127,11 @@ body {
   display: none;
 }
 
+/* Hide mobile frontpage */
+#mobile-frontpage {
+  display: none;
+}
+
 /* Welcome section */
 #welcome {
   scroll-snap-align: start;
@@ -164,6 +169,8 @@ body {
 
 /* Fullscreen video */
 #fullscreenVideo {
+  display: flex;
+  justify-content: center;
   scroll-snap-align: start;
   overflow: hidden;
 }
@@ -172,20 +179,26 @@ body {
   max-height: 100vh;
   overflow: hidden;
 }
-#playButton {
+#controls {
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 70%;
   position: absolute;
+  transition: 0.2s ease-in-out;
 }
 .fa-play,
 .fa-pause {
-  transition: 0.2s ease-in-out;
   cursor: pointer;
   font-size: 90pt;
+  color: rgb(255, 255, 255);
+}
+.fa-backward,
+.fa-forward {
+  cursor: pointer;
+  font-size: 30pt;
   color: rgb(255, 255, 255);
 }
 
@@ -470,6 +483,7 @@ body {
   #mobile-frontpage {
     height: 100%;
     display: block;
+    overflow: hidden;
   }
   #mobile-frontpage img {
     width: 150%;
