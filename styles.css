@@ -230,6 +230,20 @@ body {
   font-weight: 900;
 }
 
+/* Mobil tidslinjen */
+#tidslinje-mobil {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  background-image: url(images/tidslinje-mobil.svg);
+  background-size: 140%;
+  background-position: center;
+}
+
+#tidslinje-mobil-tekst {
+  background-color: #ffff;
+}
+
 /* Timeline section */
 #horizontal-container {
   display: flex;
@@ -449,6 +463,30 @@ body {
 
 /* Responsive telefon */
 @media only screen and (max-width: 1023px) {
+  /* First section */
+  #zoom-container {
+    display: none;
+  }
+  #mobile-frontpage {
+    height: 100%;
+    display: block;
+  }
+  #mobile-frontpage img {
+    width: 150%;
+    position: relative;
+    right: 25%;
+    bottom: 20px;
+    margin: auto;
+  }
+  #mobile-frontpage h1 {
+    width: 80%;
+    font-size: 35pt;
+    font-weight: 100;
+    text-align: center;
+    margin: auto;
+  }
+
+  /* Second section */
   #welcome {
     flex-direction: column;
     width: 80%;
