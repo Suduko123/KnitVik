@@ -234,6 +234,20 @@ body {
   font-weight: 900;
 }
 
+/* Mobil tidslinjen */
+#tidslinje-mobil{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  background-image: url(images/tidslinje-mobil.svg);
+  background-size: 140%;
+  background-position: center;
+}
+
+#tidslinje-mobil-tekst {
+  background-color: #ffff;
+}
+
 /* Timeline section */
 #horizontal-container {
   display: flex;
@@ -304,6 +318,7 @@ body {
   gap: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+  padding-top: 20px;
 }
 .video-container {
   pointer-events: fill;
