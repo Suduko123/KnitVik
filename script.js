@@ -270,16 +270,19 @@ twoVids.forEach((vid) => {
 const playButton = document.querySelector(".fa-play");
 const fulscreenVideo = document.querySelector("#fullscreenVideo video");
 const videoContainer = document.querySelector("#fullscreenVideo");
+let hideButtonTimer = null;
 
 playButton.addEventListener("click", () => {
   if (fulscreenVideo.paused) {
     fulscreenVideo.play();
     playButton.classList.replace("fa-play", "fa-pause");
-    setTimeout(hideButton, 3000);
+    hideButtonTimer = setTimeout(hideButton, 3000);
     checkMove();
   } else {
     fulscreenVideo.pause();
     playButton.classList.replace("fa-pause", "fa-play");
+    clearTimeout(hideButtonTimer);
+    playButton.style.filter = "opacity(1)";
   }
 });
 
@@ -287,10 +290,14 @@ function checkMove() {
   videoContainer.addEventListener("mousemove", () => {
     if (!videoContainer.paused) {
       playButton.style.filter = "opacity(1)";
+      clearTimeout(hideButtonTimer);
+      hideButtonTimer = setTimeout(hideButton, 3000);
     }
   });
 }
 
 function hideButton() {
-  playButton.style.filter = "opacity(0)";
+  if (!fulscreenVideo.paused) {
+    playButton.style.filter = "opacity(0)";
+  }
 }
