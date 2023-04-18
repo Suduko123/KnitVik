@@ -61,10 +61,6 @@ body {
   transform: scale(1.6);
 }
 
-#mobile-frontpage {
-  display: none;
-}
-
 /* Animations */
 @keyframes sway {
   0% {
@@ -440,8 +436,6 @@ body {
 
 /* Responsive Ipad */
 @media only screen and (min-width: 651px) and (max-width: 1023px) {
-  /* First section */
-
   #welcome {
     flex-direction: column;
     width: 100%;
@@ -470,36 +464,9 @@ body {
 
 /* Responsive telefon */
 @media only screen and (max-width: 1023px) {
-  /* First section */
-  #zoom-container {
-    display: none;
-  }
-  #mobile-frontpage {
-    height: 100%;
-    background-image: url(images/mobilefront.svg);
-    background-size: 150%;
-    background-position-x: center;
-    background-position-y: -50px;
-    background-repeat: no-repeat;
-    display: block;
-  }
-  #mobile-frontpage h1 {
-    width: 80%;
-    font-size: 35pt;
-    font-weight: 100;
-    text-align: center;
-    padding-top: 650px;
-    margin: auto;
-  }
-
-  /* Second section */
   #welcome {
     flex-direction: column;
     width: 80%;
-  }
-  #welcome div h1 {
-    font-size: 25pt;
-    font-weight: 100;
   }
 
   #welcome div {
@@ -517,6 +484,4 @@ body {
     left: 0;
     z-index: 0;
   }
-
-  /* Third section */
 }
