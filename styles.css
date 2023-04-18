@@ -61,10 +61,6 @@ body {
   transform: scale(1.6);
 }
 
-#mobile-frontpage {
-  display: none;
-}
-
 /* Animations */
 @keyframes sway {
   0% {
@@ -318,7 +314,6 @@ body {
   gap: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-top: 20px;
 }
 .video-container {
   pointer-events: fill;
@@ -440,8 +435,6 @@ body {
 
 /* Responsive Ipad */
 @media only screen and (min-width: 651px) and (max-width: 1023px) {
-  /* First section */
-
   #welcome {
     flex-direction: column;
     width: 100%;
@@ -498,10 +491,6 @@ body {
     flex-direction: column;
     width: 80%;
   }
-  #welcome div h1 {
-    font-size: 25pt;
-    font-weight: 100;
-  }
 
   #welcome div {
     width: 100%;
@@ -518,6 +507,4 @@ body {
     left: 0;
     z-index: 0;
   }
-
-  /* Third section */
 }
