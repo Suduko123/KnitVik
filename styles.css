@@ -144,8 +144,8 @@ body {
 }
 
 #welcome div {
-  flex-direction: row;
   width: 50%;
+  flex-direction: column;
   height: auto;
 }
 
@@ -212,8 +212,8 @@ body {
 }
 #knitText h1 {
   font-size: 35pt;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #knitText p {
   margin: auto;
@@ -228,8 +228,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   padding: 30px;
   border-radius: 50%;
   background-color: #f4f1eb;
