@@ -134,12 +134,14 @@ body {
 
 /* Welcome section */
 #welcome {
+  height: 100vh;
   scroll-snap-align: start;
   display: flex;
   height: auto;
   padding-right: 10%;
   padding-left: 10%;
   padding-top: 10%;
+  padding-bottom: 10%;
   gap: 10%;
 }
 
@@ -313,7 +315,7 @@ body {
   margin-bottom: 150px;
 }
 
-#laptop {
+#laptopBig {
   position: sticky;
   top: 27%;
   width: 30%;
